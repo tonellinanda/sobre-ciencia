@@ -2,24 +2,30 @@
   <title>sobre-ciencia</title>
 </head>
 
-<body>
+<template name="Inicio">
+  
   <h1>Bem vindo(a) ao Sobre Ciência!</h1>
-
-  {{> hello}}
-  {{> info}}
-</body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<p>Acesse textos sobre divulgação científica.</p>
+<p>Compartilhe as novidades com seus amigos.</p>
+<p><a href="#">Link</a></p>
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+<template name="Sobre">
+  
+  <h1>Sobre</h1>
+  <h2>Nossa visão</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices metus magna, sit amet sodales ligula viverra at. Sed suscipit ex eu ex vehicula, ut malesuada purus suscipit. Vestibulum vehicula ornare urna nec efficitur. Morbi ligula odio, pulvinar sed viverra in, porttitor eget velit. Phasellus a purus eros. Sed id dignissim mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc facilisis lectus turpis, in ullamcorper neque gravida sed. Aliquam nec ex fermentum ligula aliquet tincidunt vitae ac massa.</p>
+
+  <h2>Nossos valores</h2>
+  <p>Etiam turpis lectus, hendrerit eget interdum sed, ornare ut sem. Nulla facilisi. Aenean dictum diam in metus mollis, ut sollicitudin ligula tristique. Etiam ultricies a quam a vulputate. Sed ante nibh, venenatis eget semper commodo, vehicula in enim. Ut malesuada mi a laoreet semper. Suspendisse in commodo est. Nullam et quam sit amet tortor faucibus laoreet non ac justo. Sed at tortor eleifend quam imperdiet faucibus ac eget lectus.</p>
+</template>
+
+<template name="Cabecalho">
+  <a href="/">Inicio</a>
+  <a href="/sobre">Sobre</a>
+</template>
+
+<template name="LayoutPrincipal">
+  {{>Cabecalho}}
+  {{>Template.dynamic template=main}}
 </template>
