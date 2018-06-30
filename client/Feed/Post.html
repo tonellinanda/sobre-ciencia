@@ -14,6 +14,11 @@
 
 	    <div>{{numerodeCurtidas}} curtidas</div>
 	    
+		{{#each comentarios}}
+			{{> Comentario}}
+		{{/each}}
+	    
+	    {{> NovoComentario}}
 	  </div>
 </div>
 </template>

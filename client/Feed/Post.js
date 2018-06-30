@@ -16,6 +16,10 @@ Template.Post.helpers({
 		} else {
 			return true;
 		}
+	},
+	comentarios: function() {
+		var comentariosDoPost = Comentarios.find({post: this._id}).fetch();
+		return comentariosDoPost
 	}	
 });
 
@@ -24,6 +28,7 @@ Template.Post.events({
 		Meteor.call("curtirPost", template.data._id);
 	},
 	"click .botao-descurtir": function(evento, template) {
+		pwd
 		Meteor.call("descurtirPost", template.data._id);
 	}
 });
