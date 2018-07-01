@@ -4,7 +4,7 @@ Meteor.methods({
 	"inserirPost": function(textoDoFormulario) {
 		
 
-		if(Meteor.userId() !==null) {
+		if(Meteor.userId() !==null && textoDoFormulario) {
 			Posts.insert({
 				texto: textoDoFormulario,
 				idDoAutor: Meteor.userId(),
