@@ -15,7 +15,7 @@ Meteor.methods({
 		}
 	},
 	"deixarDeSeguirUsuario": function(idDoUsuario) {
-		if(meteor.userId() !== idDoUsuario) {
+		if(Meteor.userId() !== idDoUsuario) {
 			Meteor.users.update(Meteor.userId(), {
 				$pull: {
 					"profile.seguindo": idDoUsuario
