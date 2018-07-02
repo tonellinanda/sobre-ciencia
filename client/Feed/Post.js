@@ -20,7 +20,12 @@ Template.Post.helpers({
 	comentarios: function() {
 		var comentariosDoPost = Comentarios.find({post: this._id}).fetch();
 		return comentariosDoPost
-	}	
+	},
+	eAutor: function() {
+		var idDoAutor = this.idDoAutor;
+		return idDoAutor === Meteor.userId();
+	}
+
 });
 
 Template.Post.events({
@@ -28,7 +33,9 @@ Template.Post.events({
 		Meteor.call("curtirPost", template.data._id);
 	},
 	"click .botao-descurtir": function(evento, template) {
-		pwd
 		Meteor.call("descurtirPost", template.data._id);
+	},
+	"click .botao-remover": function(evento, template) {
+		Meteor.call("removerPost", template.data._id);
 	}
 });

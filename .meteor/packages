@@ -28,3 +28,4 @@ useraccounts:flow-routing
 sergeyt:typeahead
 cfs:standard-packages
 cfs:gridfs
+fortawesome:fontawesome
